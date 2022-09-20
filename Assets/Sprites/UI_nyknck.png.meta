@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -225,9 +225,9 @@ TextureImporter:
       name: UI_nyknck_5
       rect:
         serializedVersion: 2
-        x: 90
+        x: 94
         y: 793
-        width: 75
+        width: 67
         height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -246,9 +246,9 @@ TextureImporter:
       name: UI_nyknck_6
       rect:
         serializedVersion: 2
-        x: 185
+        x: 188
         y: 793
-        width: 50
+        width: 44
         height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -309,9 +309,9 @@ TextureImporter:
       name: UI_nyknck_9
       rect:
         serializedVersion: 2
-        x: 120
+        x: 124
         y: 694
-        width: 65
+        width: 57
         height: 68
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
