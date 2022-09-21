@@ -1,4 +1,3 @@
-using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -21,7 +20,7 @@ public enum LevelState
 {
     LOCKED,
     IN_PROGRESS,
-    UNLOCKED
+    COMPLETED
 }
 
 [JsonConverter(typeof(StringEnumConverter))]
