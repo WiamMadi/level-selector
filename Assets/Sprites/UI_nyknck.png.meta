@@ -120,9 +120,9 @@ TextureImporter:
       name: UI_nyknck_0
       rect:
         serializedVersion: 2
-        x: 35
+        x: 49
         y: 1537
-        width: 240
+        width: 212
         height: 300
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -141,9 +141,9 @@ TextureImporter:
       name: UI_nyknck_1
       rect:
         serializedVersion: 2
-        x: 334
+        x: 348
         y: 1537
-        width: 297
+        width: 270
         height: 226
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -694,7 +694,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UI_nyknck_2: 97151398
+      UI_nyknck_20: 1065220074
       UI_nyknck_7: 127301835
       UI_nyknck_16: 787058826
       UI_nyknck_1: -2024821617
@@ -720,7 +720,7 @@ TextureImporter:
       UI_nyknck_13: 47577232
       UI_nyknck_23: -1741589923
       UI_nyknck_3: -2058403782
-      UI_nyknck_20: 1065220074
+      UI_nyknck_2: 97151398
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
