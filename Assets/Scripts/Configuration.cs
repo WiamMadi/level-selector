@@ -22,7 +22,7 @@ public abstract class Configuration<T>
     }
 
     // Load the data from the JSON file
-    public T load()
+    public T Load()
     {
         using (StreamReader sr = new StreamReader(filePath))
         {
@@ -31,7 +31,7 @@ public abstract class Configuration<T>
     }
 
     // Save the data to a JSON file
-    public void save(T data)
+    public void Save(T data)
     {
         using (StreamWriter sw = new StreamWriter(filePath)) {
             sw.Write(JsonConvert.SerializeObject(data));
@@ -39,13 +39,13 @@ public abstract class Configuration<T>
     }
 
     // Grabs the name of the file
-    public string getFileName()
+    public string GetFileName()
     {
         return fileName;
     }
 
     // Grabs the file path
-    public string getFilePath()
+    public string GetFilePath()
     {
         return filePath;
     }
