@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using Newtonsoft.Json;
+using System.Linq;
 
 [CreateAssetMenu(fileName = "Levels", menuName = "ScriptableObjects/Levels")]
 public class LevelManager : ScriptableObject, IConfiguration<List<LevelSaveData>>
@@ -45,6 +46,11 @@ public class LevelManager : ScriptableObject, IConfiguration<List<LevelSaveData>
     private void OnValidate()
     {
         Save();
+    }
+
+    public IEnumerable<LevelSaveData> GetLevels(int pageNumber, int pageLimit)
+    {
+        return levels.Skip((pageNumber - 1) * pageLimit).Take(pageLimit);
     }
 
     public List<LevelSaveData> Load()

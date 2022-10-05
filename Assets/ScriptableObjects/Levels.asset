@@ -15,6 +15,36 @@ MonoBehaviour:
   _fileName: levels.json
   _filePath: D:/Programming/Unity/Projects/level-selector/Assets/StreamingAssets\levels.json
   levels:
-  - id: WWWWWWWWW
+  - id: 2
     scence: 0
+    state: 0
+  - id: 3
+    scence: 0
+    state: 0
+  - id: 4
+    scence: 0
+    state: 0
+  - id: 5
+    scence: 0
+    state: 0
+  - id: 6
+    scence: 0
+    state: 0
+  - id: 7
+    scence: 0
+    state: 0
+  - id: 8
+    scence: 0
+    state: 0
+  - id: 9
+    scence: 0
+    state: 0
+  - id: 10
+    scence: 0
+    state: 0
+  - id: 11
+    scence: 3
+    state: 0
+  - id: 1
+    scence: 3
     state: 0
