@@ -1,14 +1,15 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class LevelGenerator : MonoBehaviour
 {
     [SerializeField] private LevelManager levelManager;
-    [SerializeField] private GameObject levelPrefab;
-    [SerializeField] private int levelsPerPage;
+    [SerializeField] private LevelSettings levelSettings;
 
-    private int currentPage = 1;
+    [SerializeField] private GameObject levelPrefab;
+    [SerializeField] private GameObject previousButton;
+    [SerializeField] private GameObject nextButton;
 
     private void Start()
     {
@@ -17,27 +18,46 @@ public class LevelGenerator : MonoBehaviour
 
     public void NextPage()
     {
-        currentPage++;
+        levelSettings.settings.currentPage++;
         LoadPage();
     }
 
     public void PreviousPage()
     {
-        currentPage--;
+        levelSettings.settings.currentPage--;
         LoadPage();
     }
 
     private void LoadPage()
     {
-        //Delete previous buttons
-        Level[] oldLevels = GameObject.FindObjectsOfType<Level>();
-
-        foreach (Level level in oldLevels)
+        // Delete all old levels
+        foreach (Level level in GameObject.FindObjectsOfType<Level>())
         {
             Destroy(level.gameObject);
         }
 
-        foreach (LevelSaveData level in levelManager.GetLevels(currentPage, levelsPerPage))
+        // Disable previous page button, if you're on the first page
+        if (levelSettings.settings.currentPage == 1)
+        {
+            previousButton.SetActive(false);
+        } 
+        else if (levelSettings.settings.currentPage > 1)
+        {
+            previousButton.SetActive(true);
+        }
+
+        // Disable next page button, if you're on the last page.
+        if (levelSettings.settings.currentPage == GetMaxPageCount())
+        {
+            nextButton.SetActive(false);
+        }
+        else if (levelSettings.settings.currentPage < GetMaxPageCount())
+        {
+            nextButton.SetActive(true);
+        }
+
+            // Load in all the levels & set their correct values
+            foreach (LevelSaveData level in GetLevels())
         {
             GameObject levelGameObject = Instantiate(levelPrefab, transform.position, transform.rotation);
             levelGameObject.transform.SetParent(gameObject.transform, false);
@@ -47,5 +67,18 @@ public class LevelGenerator : MonoBehaviour
             levelScript.state = level.state;
             levelScript.scence = level.scence;
         }
+    }
+
+    // Get levels based on current page and levels per page from LevelSettings
+    private IEnumerable<LevelSaveData> GetLevels()
+    {
+        return levelManager.levels.Skip((levelSettings.settings.currentPage - 1) *
+            levelSettings.settings.levelsPerPage).Take(levelSettings.settings.levelsPerPage);
+    }
+
+    // Get max page
+    private int GetMaxPageCount()
+    {
+        return (int) Mathf.Ceil(levelManager.levels.Count / levelSettings.settings.levelsPerPage);
     }
 }

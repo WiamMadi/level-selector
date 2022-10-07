@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018b73ff17650af4e83175e5d70c56f0, type: 3}
   m_Name: Levels
   m_EditorClassIdentifier: 
-  _fileName: levels.json
-  _filePath: D:/Programming/Unity/Projects/level-selector/Assets/StreamingAssets\levels.json
+  _jsonFileName: levels.json
+  levelSettingsData:
+    currentPage: 0
+    levelsPerPage: 0
+    saveCurrentPagePosition: 0
   levels:
   - id: 2
     scence: 0

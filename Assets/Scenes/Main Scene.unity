@@ -960,8 +960,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 11400000, guid: 2b0cfe8fa0e94824f94402118c9ae57b, type: 2}
+  levelSettings: {fileID: 11400000, guid: 638eb6bcaa0002747a9c472e54f4ab9d, type: 2}
   levelPrefab: {fileID: 4870867401313192974, guid: a09a15c9267414b4cb8457902614e620, type: 3}
-  levelsPerPage: 5
+  previousButton: {fileID: 118804658}
+  nextButton: {fileID: 1228329336}
 --- !u!1 &1739104444
 GameObject:
   m_ObjectHideFlags: 0
