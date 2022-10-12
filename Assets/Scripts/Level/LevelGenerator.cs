@@ -14,6 +14,7 @@ public class LevelGenerator : MonoBehaviour
     private void Start()
     {
         LoadPage();
+        Debug.Log(GetMaxPageCount());
     }
 
     public void NextPage()
@@ -40,7 +41,7 @@ public class LevelGenerator : MonoBehaviour
         if (levelSettings.settings.currentPage == 1)
         {
             previousButton.SetActive(false);
-        } 
+        }
         else if (levelSettings.settings.currentPage > 1)
         {
             previousButton.SetActive(true);
@@ -51,13 +52,13 @@ public class LevelGenerator : MonoBehaviour
         {
             nextButton.SetActive(false);
         }
-        else if (levelSettings.settings.currentPage < GetMaxPageCount())
+        else if (levelSettings.settings.currentPage <= GetMaxPageCount())
         {
             nextButton.SetActive(true);
         }
 
-            // Load in all the levels & set their correct values
-            foreach (LevelSaveData level in GetLevels())
+        // Load in all the levels & set their correct values
+        foreach (LevelSaveData level in GetLevels())
         {
             GameObject levelGameObject = Instantiate(levelPrefab, transform.position, transform.rotation);
             levelGameObject.transform.SetParent(gameObject.transform, false);
@@ -79,6 +80,6 @@ public class LevelGenerator : MonoBehaviour
     // Get max page
     private int GetMaxPageCount()
     {
-        return (int) Mathf.Ceil(levelManager.levels.Count / levelSettings.settings.levelsPerPage);
+        return Mathf.CeilToInt((float) levelManager.levels.Count / (float) levelSettings.settings.levelsPerPage);
     }
 }

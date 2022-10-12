@@ -13,17 +13,16 @@ MonoBehaviour:
   m_Name: Levels
   m_EditorClassIdentifier: 
   _jsonFileName: levels.json
-  levelSettingsData:
-    currentPage: 0
-    levelsPerPage: 0
-    saveCurrentPagePosition: 0
   levels:
+  - id: 1
+    scence: 0
+    state: 2
   - id: 2
     scence: 0
-    state: 0
+    state: 2
   - id: 3
     scence: 0
-    state: 0
+    state: 1
   - id: 4
     scence: 0
     state: 0
@@ -43,11 +42,8 @@ MonoBehaviour:
     scence: 0
     state: 0
   - id: 10
-    scence: 0
-    state: 0
-  - id: 11
     scence: 3
     state: 0
-  - id: 1
+  - id: 11
     scence: 3
     state: 0
