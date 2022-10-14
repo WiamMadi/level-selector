@@ -6,13 +6,13 @@ using UnityEngine;
 public class LevelSaveData
 {
     public string id;
-    public Scence scence;
+    public Scene scene;
     public LevelState state;
 
-    public LevelSaveData(string id, Scence scence, LevelState state)
+    public LevelSaveData(string id, Scene scence, LevelState state)
     {
         this.id = id;
-        this.scence = scence;
+        this.scene = scence;
         this.state = state;
     }
 }

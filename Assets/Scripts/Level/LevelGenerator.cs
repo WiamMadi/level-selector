@@ -14,7 +14,6 @@ public class LevelGenerator : MonoBehaviour
     private void Start()
     {
         LoadPage();
-        Debug.Log(GetMaxPageCount());
     }
 
     public void NextPage()
@@ -66,7 +65,7 @@ public class LevelGenerator : MonoBehaviour
             Level levelScript = levelGameObject.GetComponent<Level>();
             levelScript.id = level.id;
             levelScript.state = level.state;
-            levelScript.scence = level.scence;
+            levelScript.scene = level.scene;
         }
     }
 

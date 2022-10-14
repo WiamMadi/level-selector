@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
     [SerializeField] private Button button;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] public string id;
-    [SerializeField] public Scence scence;
+    [SerializeField] public Scene scene;
     [SerializeField] public LevelState state;
 
     private void Start()
@@ -23,6 +24,21 @@ public class Level : MonoBehaviour
             // Keep the colour but set the alpha to 255
             Color buttonColor = new Color(text.color.r, text.color.g, text.color.b, 255);
             text.color = buttonColor;
+        }
+    }
+
+    public void GoToScene()
+    {
+        int buildIndex = SceneUtility.GetBuildIndexByScenePath(scene.ToString());
+
+        // A return of -1 means the scene does not exist
+        if (buildIndex == -1)
+        {
+            Debug.LogError("The scene " + scene.ToString() + " could not be found.");
+        } else
+        {
+            // Load the appropiate scene
+            SceneManager.LoadScene(scene.ToString(), LoadSceneMode.Single);
         }
     }
 }
