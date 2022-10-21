@@ -15,35 +15,137 @@ MonoBehaviour:
   _jsonFileName: levels.json
   levels:
   - id: 1
-    scence: 0
+    scene: 0
     state: 2
   - id: 2
-    scence: 0
+    scene: 0
     state: 2
   - id: 3
-    scence: 0
+    scene: 0
     state: 1
   - id: 4
-    scence: 0
+    scene: 0
     state: 0
   - id: 5
-    scence: 0
+    scene: 0
     state: 0
   - id: 6
-    scence: 0
+    scene: 0
     state: 0
   - id: 7
-    scence: 0
+    scene: 0
     state: 0
   - id: 8
-    scence: 0
+    scene: 0
     state: 0
   - id: 9
-    scence: 0
+    scene: 0
     state: 0
   - id: 10
-    scence: 3
+    scene: 0
     state: 0
   - id: 11
-    scence: 3
+    scene: 0
+    state: 0
+  - id: 12
+    scene: 0
+    state: 0
+  - id: 13
+    scene: 0
+    state: 0
+  - id: 14
+    scene: 0
+    state: 0
+  - id: 15
+    scene: 0
+    state: 0
+  - id: 16
+    scene: 0
+    state: 0
+  - id: 17
+    scene: 0
+    state: 0
+  - id: 18
+    scene: 0
+    state: 0
+  - id: 19
+    scene: 0
+    state: 0
+  - id: 20
+    scene: 0
+    state: 0
+  - id: 21
+    scene: 0
+    state: 0
+  - id: 22
+    scene: 0
+    state: 0
+  - id: 23
+    scene: 0
+    state: 0
+  - id: 24
+    scene: 0
+    state: 0
+  - id: 25
+    scene: 0
+    state: 0
+  - id: 26
+    scene: 0
+    state: 0
+  - id: 27
+    scene: 0
+    state: 0
+  - id: 28
+    scene: 0
+    state: 0
+  - id: 29
+    scene: 0
+    state: 0
+  - id: 30
+    scene: 0
+    state: 0
+  - id: 31
+    scene: 0
+    state: 0
+  - id: 32
+    scene: 0
+    state: 0
+  - id: 33
+    scene: 0
+    state: 0
+  - id: 34
+    scene: 0
+    state: 0
+  - id: 35
+    scene: 0
+    state: 0
+  - id: 36
+    scene: 0
+    state: 0
+  - id: 37
+    scene: 0
+    state: 0
+  - id: 38
+    scene: 0
+    state: 0
+  - id: 39
+    scene: 0
+    state: 0
+  - id: 40
+    scene: 0
+    state: 0
+  - id: 41
+    scene: 0
+    state: 0
+  - id: 42
+    scene: 0
+    state: 0
+  - id: 43
+    scene: 0
+    state: 0
+  - id: 44
+    scene: 0
+    state: 0
+  - id: 45
+    scene: 0
     state: 0

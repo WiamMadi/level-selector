@@ -1,6 +1,6 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
@@ -27,6 +27,7 @@ public class Level : MonoBehaviour
         }
     }
 
+    // Send the user to the correct scene
     public void GoToScene()
     {
         int buildIndex = SceneUtility.GetBuildIndexByScenePath(scene.ToString());

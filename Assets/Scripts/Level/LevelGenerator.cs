@@ -1,6 +1,6 @@
-using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System.Collections.Generic;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -16,18 +16,21 @@ public class LevelGenerator : MonoBehaviour
         LoadPage();
     }
 
+    // Go forward a page
     public void NextPage()
     {
         levelSettings.settings.currentPage++;
         LoadPage();
     }
 
+    // Go back a page
     public void PreviousPage()
     {
         levelSettings.settings.currentPage--;
         LoadPage();
     }
 
+    // Load the page
     private void LoadPage()
     {
         // Delete all old levels
