@@ -9,7 +9,7 @@ public abstract class Configuration<T> : ScriptableObject
     private string _filePath;
 
     //Initialize method to setup configuration files properly
-    public void Init(string fileName)
+    protected void Init(string fileName)
     {
         // Make sure the user has supplied a file name
         if (string.IsNullOrEmpty(fileName))
@@ -30,7 +30,8 @@ public abstract class Configuration<T> : ScriptableObject
 
             // Set _filePath location while in editor
             _filePath = Path.Combine(Application.streamingAssetsPath, _fileName);
-        } else
+        }
+        else
         {
             // Copy over data
             CopyData(Path.Combine(Application.streamingAssetsPath, _fileName),
